@@ -56,10 +56,6 @@ function App() {
     return kanjilist[index];
   };
 
-  useEffect(() => {
-    kanjief();
-  }, [kanjief]);
-
   function kanjief() {
     const container = document.getElementById('kanjicont');
     const kanjinum = 20;
@@ -75,6 +71,14 @@ function App() {
       container.appendChild(kanji);
     }
   }
+
+
+
+  useEffect(() => {
+    kanjief();
+  }, [kanjief]);
+
+  
 
 
   
