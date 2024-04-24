@@ -10,6 +10,7 @@ function App() {
   const [defentry, setDefEntry] = useState(null);
   const [loading, setLoading] = useState(false);
 
+
   const searching = async () => {
     try {
       setLoading(true);
@@ -48,11 +49,18 @@ function App() {
     searching();
   };
 
+  const rankan = () => {
+    const kanjilist = ['漢', '字', '日', '本', '語', '学', '校', '先', '生', '友',
+      '達', '会', '社', '食', '事', '家', '族', '京', '都', '東'];
+    const index = Math.floor(Math.random() * kanjilist.length);
+    return kanjilist[index];
+  };
+
   useEffect(() => {
     kanjief();
-  }, []);
+  }, [kanjief]);
 
-  const kanjief = () => {
+  function kanjief() {
     const container = document.getElementById('kanjicont');
     const kanjinum = 20;
 
@@ -66,15 +74,10 @@ function App() {
       kanji.style.top = Math.random() * 100 + 'vh';
       container.appendChild(kanji);
     }
-  };
+  }
 
-  const rankan = () => {
-    const kanjilist = ['漢', '字', '日', '本', '語', '学', '校', '先', '生', '友',
-      '達', '会', '社', '食', '事', '家', '族', '京', '都', '東'];
-    const index = Math.floor(Math.random() * kanjilist.length);
-    return kanjilist[index];
-  };
 
+  
   return (
     <div className="App" style={{ fontFamily: 'arial', fontWeight: 'bold', fontStyle: 'italic' }}>
       <header className="App-header">
