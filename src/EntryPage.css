@@ -1,0 +1,41 @@
+.entry-page {
+    background-color: #282c34;
+    display: flex;
+    flex-direction: column;
+    /* Align content to the left */
+    height: 100vh; /* Ensure the entry page takes up the full viewport height */
+    padding: 20px; /* Add padding to provide some space around the content */
+    font-size: calc(10px + 2vmin);
+    color: white;
+    position: relative;
+    overflow: hidden; /* Position relative to contain the absolute-positioned elements */
+  }
+  
+  .background-kanji {
+    position: fixed; /* Change to fixed positioning */
+    left:10; 
+    width: 100%; /* Make sure the kanji spans the entire width */
+    height: 100%; /* Make sure the kanji spans the entire height */
+    font-size: 700px;
+    opacity: 0.5;
+    z-index: 2; 
+  }
+  
+  .content {
+    z-index: 1; /* Ensure content is positioned on top of background kanji */
+  }
+  
+  .kanji {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .hiragana {
+    font-size: 24px;
+    color: #666;
+  }
+  
+  .definition {
+    margin-bottom: 20px;
+  }
+  
